@@ -1,0 +1,61 @@
+/*====================================================
+----------------------MIXINS--------------------------
+=====================================================*/
+@font-face {
+  font-family: "agency-reg";
+  src: url(../fonts/AGENCYR.TTF);
+}
+
+@font-face {
+  font-family: "agency-bold";
+  src: url(../fonts/AGENCYB.TTF);
+}
+
+@font-face {
+  font-family: "century-gothicbold";
+  src: url(../fonts/GOTHICB.TTF);
+}
+
+@font-face {
+  font-family: "century-gothic";
+  src: url(../fonts/GOTHIC.TTF);
+}
+
+@font-face {
+  font-family: "engravers-gothic";
+  src: url(../fonts/EngraversGothicBT.ttf);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  /*Equivalent to 10px*/
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+  text-transform: uppercase;
+  overflow-x: hidden;
+}
+
+.hero {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background: url(/public/images/Audi-R8-Green.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*# sourceMappingURL=styles.css.map */
