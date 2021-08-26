@@ -2,6 +2,22 @@
 ----------------------MIXINS--------------------------
 =====================================================*/
 
+@mixin transformX {
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+@mixin transformY {
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
 //-------POSITION/CENTERING MIXINS---------
 @mixin absol-center {
   position: absolute;

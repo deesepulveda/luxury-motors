@@ -57,5 +57,72 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  z-index: -1;
+}
+
+.header {
+  width: 100%;
+  height: auto;
+  font-family: "century-gothicbold", sans-serif;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .main-title {
+  width: 100%;
+  height: auto;
+  padding: 2rem;
+  font-size: 4rem;
+  letter-spacing: 1.5rem;
+  word-spacing: 0.5rem;
+  -webkit-text-stroke: 0.15rem #11db91;
+  -webkit-text-fill-color: transparent;
+}
+
+.make {
+  width: 100%;
+  height: 80rem;
+  background-color: antiquewhite;
+}
+
+.navbar {
+  width: 60%;
+  height: 50vh;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  position: fixed;
+  background-color: #7a832a;
+}
+
+.navbar .navbar-ul {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar .navbar-ul .navbar-li {
+  width: 100%;
+  height: calc(100% / 4);
+  list-style-type: none;
+  font-family: "engravers-gothic", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px dotted red;
+}
+
+.navbar .navbar-ul .navbar-li .navbar-links:link,
+.navbar .navbar-ul .navbar-li .navbar-links:visited {
+  text-decoration: none;
+  color: #fff;
 }
 /*# sourceMappingURL=styles.css.map */
