@@ -1,3 +1,6 @@
+/*================================================
+------------------MEDIA QUERIES-------------------
+================================================*/
 /*====================================================
 ----------------------MIXINS--------------------------
 =====================================================*/
@@ -60,6 +63,12 @@ body {
   z-index: -1;
 }
 
+@media only screen and (min-width: 1824px) {
+  .hero {
+    background-position: top;
+  }
+}
+
 .header {
   width: 100%;
   height: auto;
@@ -67,20 +76,59 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .header .main-title {
   width: 100%;
   height: auto;
-  padding: 2rem;
+  padding: 2rem 2rem 2rem 3rem;
   font-size: 4rem;
   letter-spacing: 1.5rem;
   word-spacing: 0.5rem;
   -webkit-text-stroke: 0.2rem #11db91;
   -webkit-text-fill-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 620px) {
+  .header .main-title {
+    padding: 4rem 2rem 4rem 3rem;
+    font-size: 4.5rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .header .main-title {
+    padding-left: 4rem;
+    font-size: 6rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .header .main-title {
+    font-size: 7rem;
+  }
+}
+
+@media only screen and (min-width: 1112px) {
+  .header .main-title {
+    font-size: 8rem;
+  }
+}
+
+@media only screen and (min-width: 1366px) {
+  .header .main-title {
+    font-size: 10rem;
+    word-spacing: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1824px) {
+  .header .main-title {
+    font-size: 12rem;
+  }
 }
 
 .make {
@@ -174,6 +222,13 @@ body {
   color: #080808;
 }
 
+@media only screen and (min-width: 768px) {
+  .navbar .navbar-ul .navbar-li:hover > .navbar-links:link,
+  .navbar .navbar-ul .navbar-li .navbar-links:visited {
+    font-weight: 900;
+  }
+}
+
 .navbar .navbar-ul .navbar-li .navbar-links:link,
 .navbar .navbar-ul .navbar-li .navbar-links:visited {
   text-decoration: none;
@@ -185,6 +240,20 @@ body {
   -moz-transition: 0.3s ease;
   -ms-transition: 0.3s ease;
   -o-transition: 0.3s ease;
+}
+
+@media only screen and (min-width: 768px) {
+  .navbar .navbar-ul .navbar-li .navbar-links:link,
+  .navbar .navbar-ul .navbar-li .navbar-links:visited {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (min-width: 1224px) {
+  .navbar .navbar-ul .navbar-li .navbar-links:link,
+  .navbar .navbar-ul .navbar-li .navbar-links:visited {
+    font-size: 3.5rem;
+  }
 }
 
 .navbar .navbar-ul .navbar-li .navbar-links:link:hover,
@@ -246,10 +315,10 @@ body {
 }
 
 .burger {
-  width: 10rem;
-  height: 10rem;
+  width: 6rem;
+  height: 8rem;
   position: absolute;
-  bottom: 0;
+  bottom: 2%;
   left: 50%;
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
@@ -268,6 +337,13 @@ body {
   z-index: 90;
 }
 
+@media only screen and (min-width: 834px) {
+  .burger {
+    width: 8rem;
+    height: 9rem;
+  }
+}
+
 .burger .cheese {
   width: 7rem;
   height: 45%;
@@ -277,7 +353,7 @@ body {
 
 .burger .cheese .top {
   width: 100%;
-  height: 1rem;
+  height: 0.75rem;
   position: relative;
   position: absolute;
   top: 0;
@@ -290,6 +366,12 @@ body {
   -o-transition: 0.4s ease;
   box-shadow: 0.3rem 0.3rem 2rem #7c7979;
   overflow: hidden;
+}
+
+@media only screen and (min-width: 834px) {
+  .burger .cheese .top {
+    height: 1rem;
+  }
 }
 
 .burger .cheese .top::after {
@@ -306,7 +388,7 @@ body {
 
 .burger .cheese .meat {
   width: 100%;
-  height: 1rem;
+  height: 0.75rem;
   background-color: #11db91;
   overflow: hidden;
   position: relative;
@@ -326,6 +408,12 @@ body {
   box-shadow: 0.3rem 0.3rem 2rem #7c7979;
 }
 
+@media only screen and (min-width: 834px) {
+  .burger .cheese .meat {
+    height: 1rem;
+  }
+}
+
 .burger .cheese .meat::after {
   content: "";
   width: 20%;
@@ -340,7 +428,7 @@ body {
 
 .burger .cheese .bottom {
   width: 100%;
-  height: 1rem;
+  height: 0.75rem;
   position: relative;
   position: absolute;
   bottom: 0;
@@ -353,6 +441,12 @@ body {
   -ms-transition: 0.4s ease;
   -o-transition: 0.4s ease;
   box-shadow: 0.3rem 0.3rem 2rem #7c7979;
+}
+
+@media only screen and (min-width: 834px) {
+  .burger .cheese .bottom {
+    height: 1rem;
+  }
 }
 
 .burger .cheese .bottom::after {
@@ -410,6 +504,50 @@ body {
 
 .sticky {
   top: 0;
-  left: 83%;
+  left: 85%;
+}
+
+@media only screen and (min-width: 480px) {
+  .sticky {
+    left: 88%;
+  }
+}
+
+@media only screen and (min-width: 620px) {
+  .sticky {
+    left: 90%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .sticky {
+    left: 92%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .sticky {
+    left: 94%;
+  }
+}
+
+@media only screen and (min-width: 834px) {
+  .sticky {
+    left: 93%;
+  }
+}
+
+@media only screen and (min-width: 1112px) {
+  .sticky {
+    top: 1%;
+    left: 94%;
+  }
+}
+
+@media only screen and (min-width: 1366px) {
+  .sticky {
+    top: 0;
+    left: 95%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

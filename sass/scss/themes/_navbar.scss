@@ -49,6 +49,12 @@
       &:hover > .navbar-links:link,
       .navbar-links:visited {
         color: $color-dark;
+
+        @include tabletPortrait {
+          & {
+            font-weight: 900;
+          }
+        }
       }
 
       .navbar-links:link,
@@ -58,6 +64,18 @@
         font-size: 2.25rem;
         letter-spacing: 0.5rem;
         @include transit3;
+
+        @include tabletPortrait {
+          & {
+            font-size: 3rem;
+          }
+        }
+
+        @include desktop {
+          & {
+            font-size: 3.5rem;
+          }
+        }
 
         &:hover {
           letter-spacing: 1rem;

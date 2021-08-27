@@ -7,4 +7,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
+
+  @include largeDesktop {
+    & {
+      background-position: top;
+    }
+  }
 }

@@ -3,16 +3,55 @@
   height: auto;
   font-family: $tertiary-font;
   @include absol-topLeftZero;
-  @include flex-center;
 
   .main-title {
     width: 100%;
     height: auto;
-    padding: 2rem;
+    padding: 2rem 2rem 2rem 3rem;
     font-size: 4rem;
     letter-spacing: 1.5rem;
     word-spacing: 0.5rem;
     -webkit-text-stroke: 0.2rem $color-green;
     -webkit-text-fill-color: transparent;
+    @include flex-center;
+
+    @include phoneLandscape {
+      & {
+        padding: 4rem 2rem 4rem 3rem;
+        font-size: 4.5rem;
+      }
+    }
+
+    @include tabletPortrait {
+      & {
+        padding-left: 4rem;
+        font-size: 6rem;
+      }
+    }
+
+    @include tabletLandscape {
+      & {
+        font-size: 7rem;
+      }
+    }
+
+    @include tabletLandscapeLarge {
+      & {
+        font-size: 8rem;
+      }
+    }
+
+    @include tabletLandscapeXL {
+      & {
+        font-size: 10rem;
+        word-spacing: 1rem;
+      }
+    }
+
+    @include largeDesktop {
+      & {
+        font-size: 12rem;
+      }
+    }
   }
 }
