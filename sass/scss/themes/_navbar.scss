@@ -3,27 +3,128 @@
   height: 50vh;
   position: absolute;
   top: 50%;
-  left: 0;
+  left: -100vw;
   @include transformY;
   position: fixed;
-  background-color: rgb(122, 131, 42);
+  @include transit3;
+  z-index: 100;
 
   .navbar-ul {
     @include keep-it-hundo;
+    @include flex-spaceEvenly;
+    flex-direction: column;
 
     .navbar-li {
       width: 100%;
-      height: calc(100% / 4);
+      height: calc(100% / 4 - 10px);
+      position: relative;
       list-style-type: none;
-      font-family: $engravers-font;
+      background-color: $color-dark;
+      opacity: 0.9;
+      font-family: $primary-font;
       @include flex-center;
-      border: 1px dotted red;
+      @include transit3;
+
+      &::after {
+        content: "";
+        background-color: $color-dark;
+        z-index: -1;
+        @include keep-it-hundo;
+        @include absol-topLeftZero;
+        @include skew-half;
+        @include transit3;
+      }
+
+      &:hover::after {
+        background-color: $color-green;
+        border: transparent;
+      }
+
+      &:hover {
+        background-color: $color-green;
+        opacity: 0.9;
+        border: transparent;
+      }
+
+      &:hover > .navbar-links:link,
+      .navbar-links:visited {
+        color: $color-dark;
+      }
 
       .navbar-links:link,
       .navbar-links:visited {
         text-decoration: none;
         color: $color-lite;
+        font-size: 2.25rem;
+        letter-spacing: 0.5rem;
+        @include transit3;
+
+        &:hover {
+          letter-spacing: 1rem;
+          transform: scale(1.1);
+          -webkit-transform: scale(1.1);
+          -moz-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          -o-transform: scale(1.1);
+        }
       }
     }
+  }
+}
+
+//**** JS EVENT LISTENER SHOW NAV ****
+
+.showNav {
+  transform: translate(100vw, -50%);
+  -webkit-transform: translate(100vw, -50%);
+  -moz-transform: translate(100vw, -50%);
+  -ms-transform: translate(100vw, -50%);
+  -o-transform: translate(100vw, -50%);
+}
+
+//**** NAV LIST SLIDE OUT ANIMATION ****
+
+.slideLeft-One {
+  animation: slideIn 0.3s linear 0.05s both;
+  -webkit-animation: slideIn 0.3s linear 0.1s both;
+}
+
+/*********/
+.slideLeft-Two {
+  animation: slideIn 0.3s linear 0.2s both;
+  -webkit-animation: slideIn 0.3s linear 0.25s both;
+}
+
+/*********/
+
+.slideLeft-Three {
+  animation: slideIn 0.3s linear 0.4s both;
+  -webkit-animation: slideIn 0.3s linear 0.4s both;
+}
+
+/*********/
+
+.slideLeft-Four {
+  animation: slideIn 0.3s linear 0.6s both;
+  -webkit-animation: slideIn 0.3s linear 0.55s both;
+}
+
+//**** KEYFRAMES FOR NAV LIST ANIMATION ****
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-120%);
+    -webkit-transform: translateX(-120%);
+    -moz-transform: translateX(-120%);
+    -ms-transform: translateX(-120%);
+    -o-transform: translateX(-120%);
+  }
+
+  100% {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
   }
 }

@@ -1,7 +1,7 @@
 .header {
   width: 100%;
   height: auto;
-  font-family: $centurybold-font;
+  font-family: $tertiary-font;
   @include absol-topLeftZero;
   @include flex-center;
 
@@ -12,7 +12,7 @@
     font-size: 4rem;
     letter-spacing: 1.5rem;
     word-spacing: 0.5rem;
-    -webkit-text-stroke: 0.15rem $color-green;
+    -webkit-text-stroke: 0.2rem $color-green;
     -webkit-text-fill-color: transparent;
   }
 }
