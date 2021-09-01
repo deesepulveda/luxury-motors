@@ -1,0 +1,259 @@
+.section-cars {
+  width: 100%;
+  max-width: 120rem;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+
+  .car-container {
+    width: 100%;
+    height: 30rem;
+    background-color: $color-lite;
+    position: relative;
+    @include sticky-position;
+    top: 10%;
+
+    @include tabletLandscape {
+      & {
+        height: 40rem;
+      }
+    }
+
+    @include largeDesktop {
+      & {
+        height: 50rem;
+      }
+    }
+
+    .title-container {
+      @include keep-it-hundo;
+      @include flex-center;
+
+      .bg-title {
+        @include flex-center;
+        font-size: 12rem;
+        color: gainsboro;
+        font-family: $tertiary-font;
+        letter-spacing: 1rem;
+        z-index: -1;
+
+        @include phoneLandscape {
+          & {
+            font-size: 14rem;
+          }
+        }
+
+        @include tabletPortrait {
+          & {
+            font-size: 16rem;
+          }
+        }
+
+        @include tabletLandscape {
+          & {
+            font-size: 20rem;
+          }
+        }
+
+        @include largeDesktop {
+          & {
+            font-size: 22rem;
+          }
+        }
+      }
+
+      .bg-title-mercedes,
+      .bg-title-jaguar {
+        font-size: 10rem;
+
+        @include phoneLandscape {
+          & {
+            font-size: 12rem;
+          }
+        }
+
+        @include tabletPortrait {
+          & {
+            font-size: 14rem;
+          }
+        }
+
+        @include tabletLandscape {
+          & {
+            font-size: 16rem;
+          }
+        }
+
+        @include largeDesktop {
+          & {
+            font-size: 20rem;
+          }
+        }
+      }
+    }
+
+    .car-box {
+      width: 100%;
+      height: 80%;
+      position: relative;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      @include tabletLandscape {
+        & {
+          bottom: 5%;
+        }
+      }
+
+      .car-img-box {
+        width: calc(100% / 2 - 1rem);
+        height: auto;
+
+        @include tabletPortrait {
+          & {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+          }
+        }
+
+        @include tabletLandscape {
+          & {
+            padding-top: 10rem;
+          }
+        }
+
+        .car-img {
+          @include keep-it-hundo;
+          object-fit: contain;
+
+          @include tabletPortrait {
+            & {
+              width: 80%;
+              height: auto;
+            }
+          }
+
+          @include tabletLandscape {
+            & {
+              width: 70%;
+            }
+          }
+        }
+      }
+
+      .car-info-box {
+        width: auto;
+        height: auto;
+        margin-right: 1rem;
+        font-family: $quinary-font;
+        font-size: 1.75rem;
+        @include flex-center-col;
+        @include text-shadowgray-lite;
+
+        @include phoneLandscape {
+          & {
+            font-size: 2rem;
+          }
+        }
+
+        @include tabletPortrait {
+          & {
+            font-size: 2.5rem;
+          }
+        }
+
+        @include tabletPortraitLarge {
+          & {
+            padding-bottom: 5rem;
+          }
+        }
+
+        @include largeDesktop {
+          & {
+            font-size: 3rem;
+          }
+        }
+
+        .car-info-bottom {
+          margin-bottom: 0.5rem;
+
+          @include tabletLandscape {
+            & {
+              margin-bottom: 1rem;
+            }
+          }
+        }
+
+        .car-info-btn {
+          width: 12rem;
+          height: auto;
+          position: relative;
+          @include flex-center;
+
+          @include phonePortrait {
+            & {
+              width: 14rem;
+            }
+          }
+
+          @include tabletPortrait {
+            & {
+              width: 17rem;
+            }
+          }
+
+          @include largeDesktop {
+            & {
+              width: 20rem;
+            }
+          }
+
+          &::before {
+            content: "";
+            width: 0;
+            height: 100%;
+            @include absol-topLeftZero;
+            @include skew-full;
+            @include transit2;
+            z-index: -1;
+          }
+
+          &::after {
+            content: "";
+            @include keep-it-hundo;
+            // background-color: $color-lite;
+            border: 2px solid $color-dark;
+            @include absol-topLeftZero;
+            @include skew-full;
+            z-index: -1;
+          }
+
+          &:hover::before {
+            width: 100%;
+            background-color: #080808;
+            z-index: 1;
+          }
+
+          &:hover > .btn:link,
+          .btn-visited {
+            color: $color-lite;
+          }
+
+          .btn:link,
+          .btn-visited {
+            // @include keep-it-hundo;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            color: $color-dark;
+            z-index: 3;
+          }
+        }
+      }
+    }
+  }
+}
