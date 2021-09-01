@@ -1,6 +1,134 @@
 .section-video {
   width: 100%;
-  height: 80rem;
+  height: 55rem;
+  margin: 10rem auto;
   position: relative;
-  background-color: rgb(196, 230, 7);
+
+  .swiper-container {
+    @include keep-it-hundo;
+    position: relative;
+
+    .swiper-slide {
+      @include keep-it-hundo;
+      position: relative;
+
+      &::after {
+        content: "";
+        @include keep-it-hundo;
+        @include absol-topLeftZero;
+        background-color: $color-dark;
+        opacity: 0.6;
+      }
+
+      .vid {
+        @include keep-it-hundo;
+        object-fit: cover;
+        position: relative;
+        z-index: -1;
+      }
+
+      .vid-content-container {
+        width: 100%;
+        height: 80%;
+        margin-top: 1rem;
+        color: $color-lite;
+        @include absol-topLeftZero;
+        @include flex-center-col;
+        z-index: 1;
+
+        .vid-content-title,
+        .vid-content-info,
+        .vid-content-link {
+          width: 100%;
+        }
+
+        .vid-content-title {
+          height: 15%;
+          font-size: 2rem;
+          margin-top: 1rem;
+          @include flex-center;
+          font-family: $tertiary-font;
+        }
+
+        .vid-content-info {
+          width: 100%;
+          height: 70%;
+          position: relative;
+          @include flex-center;
+
+          &::after {
+            content: "";
+            width: 80%;
+            height: 0.07rem;
+            margin: 1rem auto;
+            border: 0.1rem solid $color-lite;
+            background-color: $color-lite;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            @include transformX;
+          }
+
+          p {
+            padding: 0 1.5rem;
+            font-family: $primary-font;
+            font-size: 1.75rem;
+            text-align: justify;
+            text-indent: 1.5rem;
+          }
+        }
+
+        .vid-content-link {
+          height: auto;
+          @include flex-center;
+
+          a:link,
+          a:visited {
+            padding: 1rem 2rem;
+            text-decoration: none;
+            font-family: $primary-font;
+            font-size: 2rem;
+            font-weight: bolder;
+            color: $color-dark;
+            background-color: $color-lite;
+            @include transit2;
+
+            &:hover {
+              color: $color-lite;
+              background-color: $color-gray-lite;
+              transform: translateX(-7%);
+              -webkit-transform: translateX(-7%);
+              -moz-transform: translateX(-7%);
+              -ms-transform: translateX(-7%);
+              -o-transform: translateX(-7%);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .swiper-pagination-bullets {
+    width: 50%;
+    height: auto;
+    margin-bottom: 1rem;
+
+    .swiper-pagination-bullet {
+      width: 5rem;
+      height: 2rem;
+      opacity: 1;
+      background-color: transparent;
+      border: 0.3rem solid $color-green;
+      border-radius: 0;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      -ms-border-radius: 0;
+      -o-border-radius: 0;
+    }
+
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+      background-color: $color-green;
+    }
+  }
 }

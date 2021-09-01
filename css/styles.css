@@ -424,9 +424,163 @@ body {
 
 .section-video {
   width: 100%;
-  height: 80rem;
+  height: 55rem;
+  margin: 10rem auto;
   position: relative;
-  background-color: #c4e607;
+}
+
+.section-video .swiper-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.section-video .swiper-container .swiper-slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.section-video .swiper-container .swiper-slide::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #080808;
+  opacity: 0.6;
+}
+
+.section-video .swiper-container .swiper-slide .vid {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: -1;
+}
+
+.section-video .swiper-container .swiper-slide .vid-content-container {
+  width: 100%;
+  height: 80%;
+  margin-top: 1rem;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.section-video .swiper-container .swiper-slide .vid-content-container .vid-content-title,
+.section-video .swiper-container .swiper-slide .vid-content-container .vid-content-info,
+.section-video .swiper-container .swiper-slide .vid-content-container .vid-content-link {
+  width: 100%;
+}
+
+.section-video .swiper-container .swiper-slide .vid-content-container .vid-content-title {
+  height: 15%;
+  font-size: 2rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "century-gothicbold", sans-serif;
+}
+
+.section-video .swiper-container .swiper-slide .vid-content-container .vid-content-info {
+  width: 100%;
+  height: 70%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-video .swiper-container .swiper-slide .vid-content-container .vid-content-info::after {
+  content: "";
+  width: 80%;
+  height: 0.07rem;
+  margin: 1rem auto;
+  border: 0.1rem solid #fff;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+.section-video .swiper-container .swiper-slide .vid-content-container .vid-content-info p {
+  padding: 0 1.5rem;
+  font-family: "engravers-gothic", sans-serif;
+  font-size: 1.75rem;
+  text-align: justify;
+  text-indent: 1.5rem;
+}
+
+.section-video .swiper-container .swiper-slide .vid-content-container .vid-content-link {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-video .swiper-container .swiper-slide .vid-content-container .vid-content-link a:link,
+.section-video .swiper-container .swiper-slide .vid-content-container .vid-content-link a:visited {
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-family: "engravers-gothic", sans-serif;
+  font-size: 2rem;
+  font-weight: bolder;
+  color: #080808;
+  background-color: #fff;
+  transition: 0.2s ease;
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -ms-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+}
+
+.section-video .swiper-container .swiper-slide .vid-content-container .vid-content-link a:link:hover,
+.section-video .swiper-container .swiper-slide .vid-content-container .vid-content-link a:visited:hover {
+  color: #fff;
+  background-color: #7c7979;
+  transform: translateX(-7%);
+  -webkit-transform: translateX(-7%);
+  -moz-transform: translateX(-7%);
+  -ms-transform: translateX(-7%);
+  -o-transform: translateX(-7%);
+}
+
+.section-video .swiper-pagination-bullets {
+  width: 50%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.section-video .swiper-pagination-bullets .swiper-pagination-bullet {
+  width: 5rem;
+  height: 2rem;
+  opacity: 1;
+  background-color: transparent;
+  border: 0.3rem solid #11db91;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+}
+
+.section-video .swiper-pagination-bullets .swiper-pagination-bullet-active {
+  opacity: 1;
+  background-color: #11db91;
 }
 
 .navbar {

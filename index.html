@@ -11,6 +11,11 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./css/styles.css" />
+    <!-- SWIPER JS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <!------ HERO ------>
@@ -124,12 +129,102 @@
         </div>
       </div>
     </section>
-    <section class="sections section-video"></section>
+    <section class="sections section-video">
+      <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <video
+              class="vid"
+              autoplay
+              muted
+              loop
+              src="./public/mp4s/Screen_Recording_20210705-234448_YouTube_Trim_Mercedes.mp4"
+              type="video/mp4"
+            ></video>
+            <div class="vid-content-container">
+              <div class="vid-content-title">
+                <h3>private showroom tour</h3>
+              </div>
+              <div class="vid-content-info">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Obcaecati necessitatibus quas eveniet dolor at dolore aliquid
+                  ab illum? Saepe nam similique possimus mollitia. Eveniet
+                  libero deleniti omnis cupiditate aliquam soluta? Id quibusdam
+                  nam, officiis amet illum provident placeat? Minus consequuntur
+                  veniam, eius animi consequatur at magnam laborum obcaecati a?
+                </p>
+              </div>
+              <div class="vid-content-link"><a href="#">more info</a></div>
+            </div>
+          </div>
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <video
+              class="vid"
+              autoplay
+              muted
+              loop
+              src="./public/mp4s/Screen_Recording_Jaguar_20210705-235807_YouTube_Trim.mp4"
+              type="video/mp4"
+            ></video>
+            <div class="vid-content-container">
+              <div class="vid-content-title">
+                <h3>test drive</h3>
+              </div>
+              <div class="vid-content-info">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Obcaecati necessitatibus quas eveniet dolor at dolore aliquid
+                  ab illum? Saepe nam similique possimus mollitia. Eveniet
+                  libero deleniti omnis cupiditate aliquam soluta? Id quibusdam
+                  nam, officiis amet illum provident placeat? Minus consequuntur
+                  veniam, eius animi consequatur at magnam laborum obcaecati a?
+                </p>
+              </div>
+              <div class="vid-content-link"><a href="#">more info</a></div>
+            </div>
+          </div>
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <video
+              class="vid"
+              autoplay
+              muted
+              loop
+              src="./public/mp4s/Screen_Recording_20210705-231343_YouTube_Trim.mp4"
+              type="video/mp4"
+            ></video>
+            <div class="vid-content-container">
+              <div class="vid-content-title">
+                <h3>car lease program</h3>
+              </div>
+              <div class="vid-content-info">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Obcaecati necessitatibus quas eveniet dolor at dolore aliquid
+                  ab illum? Saepe nam similique possimus mollitia. Eveniet
+                  libero deleniti omnis cupiditate aliquam soluta? Id quibusdam
+                  nam, officiis amet illum provident placeat? Minus consequuntur
+                  veniam, eius animi consequatur at magnam laborum obcaecati a?
+                </p>
+              </div>
+              <div class="vid-content-link"><a href="#">more info</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
     <section class="sections"></section>
     <section class="sections"></section>
 
+    <!------ SWIPER JS INIT ------>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="/app.js/vendors/_vendors.js"></script>
     <!------ JAVASCRIPT ------>
-
     <script src="./app.js/script.js" async defer></script>
   </body>
 </html>
