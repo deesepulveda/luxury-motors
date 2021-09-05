@@ -70,3 +70,10 @@
     @content;
   }
 }
+
+// XLARGE DESKTOP
+@mixin XlargeDesktop {
+  @media only screen and (min-width: 3439px) {
+    @content;
+  }
+}
