@@ -137,7 +137,6 @@ body {
   height: 150rem;
   margin: 0 auto;
   position: relative;
-  border: 1px solid green;
 }
 
 .section-news .featured-title {
@@ -394,6 +393,106 @@ body {
     -ms-transform: translateX(0);
     -o-transform: translateX(0);
   }
+}
+
+.section-social {
+  width: 100%;
+  height: 40rem;
+  padding-top: 10rem;
+}
+
+.section-social .icon-title {
+  width: 100%;
+  height: 10rem;
+  font-size: 2.5rem;
+  letter-spacing: 0.25rem;
+  font-family: "century-gothic", sans-serif;
+  color: #080808;
+  text-shadow: 0.1rem 0.1rem 0.3rem #7c7979;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-social .icon-wrapper {
+  width: 80%;
+  height: 15rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-social .icon-wrapper .icons {
+  width: 5rem;
+  height: 5rem;
+  margin: 0 1rem;
+  background-color: #080808;
+  box-shadow: 0rem 0.2rem 0.5rem #7c7979;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+
+.section-social .icon-wrapper .icons:hover {
+  box-shadow: 0rem 2rem 2rem #7c7979;
+  transform: translateY(-15%);
+  -webkit-transform: translateY(-15%);
+  -moz-transform: translateY(-15%);
+  -ms-transform: translateY(-15%);
+  -o-transform: translateY(-15%);
+}
+
+.section-social .icon-wrapper .icons a:link,
+.section-social .icon-wrapper .icons a:visited {
+  position: relative;
+  text-decoration: none;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+
+.section-social .icon-wrapper .icons a:link::after,
+.section-social .icon-wrapper .icons a:visited::after {
+  content: "";
+  width: 40%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -80%;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transform: skew(-40deg);
+  -webkit-transform: skew(-40deg);
+  -moz-transform: skew(-40deg);
+  -ms-transform: skew(-40deg);
+  -o-transform: skew(-40deg);
+  background-color: rgba(255, 255, 255, 0.658);
+  box-shadow: 0.3rem 0.3rem 2rem #7c7979;
+}
+
+.section-social .icon-wrapper .icons a:link i,
+.section-social .icon-wrapper .icons a:visited i {
+  font-size: 4rem;
+  color: #fff;
+}
+
+.section-social .icon-wrapper .icons a:link:hover::after,
+.section-social .icon-wrapper .icons a:visited:hover::after {
+  left: 150%;
 }
 
 .section-cars {
