@@ -3,6 +3,7 @@
   height: 55rem;
   margin: 10rem auto;
   position: relative;
+  overflow: hidden;
 
   .swiper-container {
     @include keep-it-hundo;
