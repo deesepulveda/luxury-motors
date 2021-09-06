@@ -131,6 +131,271 @@ body {
   }
 }
 
+.section-news {
+  width: 100%;
+  max-width: 130rem;
+  height: 150rem;
+  margin: 0 auto;
+  position: relative;
+  border: 1px solid green;
+}
+
+.section-news .featured-title {
+  width: 100%;
+  font-size: 3rem;
+  letter-spacing: 1rem;
+  word-spacing: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0.2rem 0.2rem 0.3rem #7c7979;
+  font-family: "century-gothicbold", sans-serif;
+}
+
+.section-news .news-wrapper {
+  width: 100%;
+  height: 90%;
+  padding-top: 10rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: transparent;
+  filter: drop-shadow(0.2rem 0.2rem 0.5rem #7c7979);
+  -webkit-filter: drop-shadow(0.2rem 0.2rem 0.5rem #7c7979);
+}
+
+.section-news .news-wrapper .news-box {
+  width: 75%;
+  height: calc(100% / 3);
+  margin: 0.5rem 0;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transform: skew(-40deg);
+  -webkit-transform: skew(-40deg);
+  -moz-transform: skew(-40deg);
+  -ms-transform: skew(-40deg);
+  -o-transform: skew(-40deg);
+}
+
+.section-news .news-wrapper .news-box::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  transform: skew(40deg);
+  -webkit-transform: skew(40deg);
+  -moz-transform: skew(40deg);
+  -ms-transform: skew(40deg);
+  -o-transform: skew(40deg);
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+
+.section-news .news-wrapper .news-box:nth-child(1)::after {
+  background: url("/public/images/bmw-18-front.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.section-news .news-wrapper .news-box:nth-child(2)::after {
+  background: url("/public/images/Audi-R8-Orange.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.section-news .news-wrapper .news-box:nth-child(3)::after {
+  background: url("/public/images/Audi-R8-Greenfullback.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.section-news .news-wrapper .news-box .news-content {
+  width: 100%;
+  height: 100%;
+  display: none;
+  font-size: 2rem;
+  overflow: hidden;
+  position: relative;
+  font-family: "century-gothic", sans-serif;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: skew(40deg);
+  -webkit-transform: skew(40deg);
+  -moz-transform: skew(40deg);
+  -ms-transform: skew(40deg);
+  -o-transform: skew(40deg);
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  z-index: 5;
+}
+
+.section-news .news-wrapper .news-box .news-content::after {
+  content: "";
+  width: 300%;
+  height: 300%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  background-color: #080808;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.section-news .news-wrapper .news-box .news-content h3 {
+  width: 33rem;
+  height: 5rem;
+  margin: 4rem auto 1rem;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+}
+
+.section-news .news-wrapper .news-box .news-content hr {
+  width: 25rem;
+  height: 0.2rem;
+  margin: 1rem auto 2rem;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  background-color: #fff;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+}
+
+.section-news .news-wrapper .news-box .news-content p {
+  width: 30rem;
+  height: auto;
+  margin: 1rem auto;
+  font-size: 1.5rem;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+}
+
+.section-news .news-wrapper .news-box .news-content .content-link {
+  width: 50%;
+  height: 7rem;
+  margin: 2rem auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+}
+
+.section-news .news-wrapper .news-box .news-content .content-link a:link,
+.section-news .news-wrapper .news-box .news-content .content-link a:visited {
+  color: #080808;
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  font-family: "agency-bold", sans-serif;
+  transition: 0.2s ease;
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -ms-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+}
+
+.section-news .news-wrapper .news-box .news-content .content-link a:link:hover,
+.section-news .news-wrapper .news-box .news-content .content-link a:visited:hover {
+  background-color: #11db91;
+  color: #080808;
+}
+
+.section-news .news-wrapper .news-box:hover {
+  width: 200%;
+}
+
+.section-news .news-wrapper .news-box:hover > .news-content {
+  display: block;
+}
+
+.section-news .news-wrapper .news-box:hover > .news-content > h3,
+.section-news .news-wrapper .news-box p,
+.section-news .news-wrapper .news-box hr,
+.section-news .news-wrapper .news-box .content-link {
+  animation: fadeRight 0.5s ease-in-out 0.1s forwards;
+  -webkit-animation: fadeRight 0.5s ease-in-out 0.1s forwards;
+}
+
+@keyframes fadeRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
+}
+
 .section-cars {
   width: 100%;
   max-width: 120rem;
