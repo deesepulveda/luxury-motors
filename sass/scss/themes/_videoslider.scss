@@ -11,7 +11,7 @@
     position: relative;
 
     .swiper-wrapper {
-      width: 100%;
+      @include keep-it-hundo;
 
       .swiper-slide {
         @include keep-it-hundo;
@@ -178,14 +178,22 @@
       }
     }
 
-    .swiper-pagination {
+    .swiper-pagination-bullets {
       width: 100%;
       height: auto;
       margin-bottom: 1rem;
+      //border: 1px solid red;
+
+      @include tabletPortrait {
+        & {
+          margin-bottom: 2rem;
+        }
+      }
 
       .swiper-pagination-bullet {
         width: 5rem;
         height: 2rem;
+        //margin: 0 0.5rem;
         opacity: 1;
         background-color: transparent;
         border: 0.3rem solid $color-green;
@@ -200,21 +208,11 @@
             width: 8rem;
           }
         }
-      }
 
-      .swiper-pagination-bullets {
-        @include keep-it-hundo;
-        margin-bottom: 1rem;
-
-        @include tabletPortrait {
+        @include largeDesktop {
           & {
-            margin-bottom: 2rem;
+            width: 10rem;
           }
-        }
-
-        .swiper-pagination-bullet-active {
-          opacity: 1;
-          background-color: $color-green;
         }
       }
 

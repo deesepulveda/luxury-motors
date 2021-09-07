@@ -38,7 +38,6 @@
       @include flex-center;
       @include transit3;
       @include skew-full;
-      border: 1px solid red;
 
       &::after {
         content: "";

@@ -207,7 +207,6 @@ hr {
   -moz-transform: skew(-40deg);
   -ms-transform: skew(-40deg);
   -o-transform: skew(-40deg);
-  border: 1px solid red;
 }
 
 .section-news .news-wrapper .news-box::after {
@@ -835,6 +834,7 @@ hr {
 
 .section-video .swiper-container .swiper-wrapper {
   width: 100%;
+  height: 100%;
 }
 
 .section-video .swiper-container .swiper-wrapper .swiper-slide {
@@ -1026,13 +1026,19 @@ hr {
   -o-transform: translateX(-7%);
 }
 
-.section-video .swiper-container .swiper-pagination {
+.section-video .swiper-container .swiper-pagination-bullets {
   width: 100%;
   height: auto;
   margin-bottom: 1rem;
 }
 
-.section-video .swiper-container .swiper-pagination .swiper-pagination-bullet {
+@media only screen and (min-width: 768px) {
+  .section-video .swiper-container .swiper-pagination-bullets {
+    margin-bottom: 2rem;
+  }
+}
+
+.section-video .swiper-container .swiper-pagination-bullets .swiper-pagination-bullet {
   width: 5rem;
   height: 2rem;
   opacity: 1;
@@ -1046,29 +1052,18 @@ hr {
 }
 
 @media only screen and (min-width: 1024px) {
-  .section-video .swiper-container .swiper-pagination .swiper-pagination-bullet {
+  .section-video .swiper-container .swiper-pagination-bullets .swiper-pagination-bullet {
     width: 8rem;
   }
 }
 
-.section-video .swiper-container .swiper-pagination .swiper-pagination-bullets {
-  width: 100%;
-  height: 100%;
-  margin-bottom: 1rem;
-}
-
-@media only screen and (min-width: 768px) {
-  .section-video .swiper-container .swiper-pagination .swiper-pagination-bullets {
-    margin-bottom: 2rem;
+@media only screen and (min-width: 1824px) {
+  .section-video .swiper-container .swiper-pagination-bullets .swiper-pagination-bullet {
+    width: 10rem;
   }
 }
 
-.section-video .swiper-container .swiper-pagination .swiper-pagination-bullets .swiper-pagination-bullet-active {
-  opacity: 1;
-  background-color: #11db91;
-}
-
-.section-video .swiper-container .swiper-pagination .swiper-pagination-bullet-active {
+.section-video .swiper-container .swiper-pagination-bullets .swiper-pagination-bullet-active {
   opacity: 1;
   background-color: #11db91;
 }
