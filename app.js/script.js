@@ -10,6 +10,8 @@ const listOne = document.getElementById("listOne");
 const listTwo = document.getElementById("listTwo");
 const listThree = document.getElementById("listThree");
 const listFour = document.getElementById("listFour");
+const sectionCars = document.getElementById("section-cars");
+const sectionVideo = document.getElementById("section-video");
 
 // CLICK TO SHOW NAV MENU AND ANIMATIONS ----
 
@@ -29,3 +31,12 @@ burger.addEventListener("click", () => {
 window.addEventListener("scroll", () => {
   burger.classList.toggle("sticky", window.scrollY > 200);
 });
+
+// VIDEO SECTION APPEAR ON SCROLL ----
+
+// window.addEventListener("scroll", () => {
+//   sectionVideo.classList.toggle(
+//     "showVideo",
+//     window.scrollY > sectionCars.scrollHeight
+//   );
+// });

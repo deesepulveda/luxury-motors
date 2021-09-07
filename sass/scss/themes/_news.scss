@@ -4,7 +4,7 @@
   height: 150rem;
   margin: 0 auto;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 
   .featured-title {
     width: 100%;
@@ -26,6 +26,7 @@
     background-color: transparent;
     filter: drop-shadow(0.2rem 0.2rem 0.5rem $color-gray-lite);
     -webkit-filter: drop-shadow(0.2rem 0.2rem 0.5rem $color-gray-lite);
+    border: 1px dotted red;
 
     .news-box {
       width: 75%;
@@ -38,6 +39,7 @@
       @include flex-center;
       @include transit3;
       @include skew-full;
+      border: 1px solid red;
 
       &::after {
         content: "";
@@ -47,14 +49,14 @@
       }
 
       &:nth-child(1)::after {
-        background: url("/public/images/bmw-18-front.jpg");
+        background: url("../../.././public/images/bmw-18-front.jpg");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
       }
 
       &:nth-child(2)::after {
-        background: url("/public/images/Audi-R8-Orange.jpg");
+        background: url("../.././public/images/Audi-R8-Orange.jpg");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;

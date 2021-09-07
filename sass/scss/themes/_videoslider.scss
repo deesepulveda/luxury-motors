@@ -4,209 +4,223 @@
   margin: 10rem auto;
   position: relative;
   overflow: hidden;
+  @include transit4;
 
   .swiper-container {
     @include keep-it-hundo;
     position: relative;
 
-    .swiper-slide {
-      @include keep-it-hundo;
-      position: relative;
+    .swiper-wrapper {
+      width: 100%;
 
-      &::after {
-        content: "";
+      .swiper-slide {
         @include keep-it-hundo;
-        @include absol-topLeftZero;
-        background-color: $color-dark;
-        opacity: 0.6;
-      }
-
-      .vid {
-        @include keep-it-hundo;
-        object-fit: cover;
         position: relative;
-        z-index: -1;
-      }
 
-      .vid-content-container {
-        width: 100%;
-        max-width: 100rem;
-        height: 80%;
-        margin-top: 1rem;
-        color: $color-lite;
-        @include absol-topLeftZero;
-        @include flex-center-col;
-        z-index: 1;
-
-        @include tabletLandscape {
-          & {
-            width: 55%;
-          }
+        &::after {
+          content: "";
+          @include keep-it-hundo;
+          @include absol-topLeftZero;
+          background-color: $color-dark;
+          opacity: 0.6;
         }
 
-        .vid-content-title,
-        .vid-content-info,
-        .vid-content-link {
+        .vid {
+          @include keep-it-hundo;
+          object-fit: cover;
+          position: relative;
+          z-index: -1;
+        }
+
+        .vid-content-container {
           width: 100%;
-        }
-
-        .vid-content-title {
-          height: 15%;
-          font-size: 2rem;
+          max-width: 100rem;
+          height: 80%;
           margin-top: 1rem;
-          @include flex-center;
-          font-family: $tertiary-font;
-
-          @include phonePortrait {
-            & {
-              font-size: 2.5rem;
-            }
-          }
-
-          @include tabletPortrait {
-            & {
-              font-size: 3.5rem;
-            }
-          }
+          color: $color-lite;
+          @include absol-topLeftZero;
+          @include flex-center-col;
+          z-index: 1;
 
           @include tabletLandscape {
             & {
-              width: 80%;
-              justify-content: flex-start;
-              font-size: 2.5rem;
+              width: 55%;
             }
           }
-        }
 
-        .vid-content-info {
-          width: 100%;
-          height: 70%;
-          position: relative;
-          @include flex-center;
-
-          &::after {
-            content: "";
-            width: 80%;
-            height: 0.07rem;
-            margin: 1rem auto;
-            border: 0.1rem solid $color-lite;
-            background-color: $color-lite;
-            position: absolute;
-            top: 0;
-            left: 50%;
-            @include transformX;
+          .vid-content-title,
+          .vid-content-info,
+          .vid-content-link {
+            width: 100%;
           }
 
-          p {
-            padding: 0 2.5rem;
-            font-family: $primary-font;
-            font-size: 1.75rem;
-            text-align: justify;
-            text-indent: 1.5rem;
+          .vid-content-title {
+            height: 15%;
+            font-size: 2rem;
+            margin-top: 1rem;
+            @include flex-center;
+            font-family: $tertiary-font;
 
             @include phonePortrait {
               & {
-                padding: 0 4rem;
+                font-size: 2.5rem;
               }
             }
 
             @include tabletPortrait {
               & {
-                padding: 0 5rem;
-                font-size: 2rem;
+                font-size: 3.5rem;
               }
             }
 
-            @include tabletPortraitLarge {
+            @include tabletLandscape {
               & {
-                padding: 0 6rem;
-              }
-            }
-
-            @include tabletLandscapeXL {
-              & {
-                padding: 0 7rem;
-              }
-            }
-
-            @include largeDesktop {
-              & {
-                padding: 0 10rem;
+                width: 80%;
+                justify-content: flex-start;
+                font-size: 2.5rem;
               }
             }
           }
-        }
 
-        .vid-content-link {
-          height: auto;
-          @include flex-center;
+          .vid-content-info {
+            width: 100%;
+            height: 70%;
+            position: relative;
+            @include flex-center;
 
-          @include tabletLandscape {
-            & {
+            &::after {
+              content: "";
               width: 80%;
-              justify-content: flex-end;
+              height: 0.07rem;
+              margin: 1rem auto;
+              border: 0.1rem solid $color-lite;
+              background-color: $color-lite;
+              position: absolute;
+              top: 0;
+              left: 50%;
+              @include transformX;
+            }
+
+            p {
+              padding: 0 2.5rem;
+              font-family: $primary-font;
+              font-size: 1.75rem;
+              text-align: justify;
+              text-indent: 1.5rem;
+
+              @include phonePortrait {
+                & {
+                  padding: 0 4rem;
+                }
+              }
+
+              @include tabletPortrait {
+                & {
+                  padding: 0 5rem;
+                  font-size: 2rem;
+                }
+              }
+
+              @include tabletPortraitLarge {
+                & {
+                  padding: 0 6rem;
+                }
+              }
+
+              @include tabletLandscapeXL {
+                & {
+                  padding: 0 7rem;
+                }
+              }
+
+              @include largeDesktop {
+                & {
+                  padding: 0 10rem;
+                }
+              }
             }
           }
 
-          a:link,
-          a:visited {
-            padding: 1rem 2rem;
-            text-decoration: none;
-            font-family: $primary-font;
-            font-size: 2rem;
-            font-weight: bolder;
-            color: $color-dark;
-            background-color: $color-lite;
-            @include transit2;
+          .vid-content-link {
+            height: auto;
+            @include flex-center;
 
-            &:hover {
-              color: $color-lite;
-              background-color: $color-gray-lite;
-              transform: translateX(-7%);
-              -webkit-transform: translateX(-7%);
-              -moz-transform: translateX(-7%);
-              -ms-transform: translateX(-7%);
-              -o-transform: translateX(-7%);
+            @include tabletLandscape {
+              & {
+                width: 80%;
+                justify-content: flex-end;
+              }
+            }
+
+            a:link,
+            a:visited {
+              padding: 1rem 2rem;
+              text-decoration: none;
+              font-family: $primary-font;
+              font-size: 2rem;
+              font-weight: bolder;
+              color: $color-dark;
+              background-color: $color-lite;
+              @include transit2;
+
+              &:hover {
+                color: $color-lite;
+                background-color: $color-gray-lite;
+                transform: translateX(-7%);
+                -webkit-transform: translateX(-7%);
+                -moz-transform: translateX(-7%);
+                -ms-transform: translateX(-7%);
+                -o-transform: translateX(-7%);
+              }
             }
           }
         }
       }
     }
-  }
 
-  .swiper-pagination-bullets {
-    width: 50%;
-    height: auto;
-    margin-bottom: 1rem;
+    .swiper-pagination {
+      width: 100%;
+      margin-bottom: 1rem;
 
-    @include tabletPortrait {
-      & {
-        margin-bottom: 2rem;
-      }
-    }
+      .swiper-pagination-bullets {
+        @include keep-it-hundo;
+        margin-bottom: 1rem;
 
-    .swiper-pagination-bullet {
-      width: 5rem;
-      height: 2rem;
-      opacity: 1;
-      background-color: transparent;
-      border: 0.3rem solid $color-green;
-      border-radius: 0;
-      -webkit-border-radius: 0;
-      -moz-border-radius: 0;
-      -ms-border-radius: 0;
-      -o-border-radius: 0;
+        @include tabletPortrait {
+          & {
+            margin-bottom: 2rem;
+          }
+        }
 
-      @include tabletLandscape {
-        & {
-          width: 8rem;
+        .swiper-pagination-bullet-active {
+          opacity: 1;
+          background-color: $color-green;
         }
       }
-    }
 
-    .swiper-pagination-bullet-active {
-      opacity: 1;
-      background-color: $color-green;
+      .swiper-pagination-bullet {
+        width: 5rem;
+        height: 2rem;
+        opacity: 1;
+        background-color: transparent;
+        border: 0.3rem solid $color-green;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+
+        @include tabletLandscape {
+          & {
+            width: 8rem;
+          }
+        }
+      }
+
+      .swiper-pagination-bullet-active {
+        opacity: 1;
+        background-color: $color-green;
+      }
     }
   }
 }
