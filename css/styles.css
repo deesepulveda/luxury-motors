@@ -184,7 +184,6 @@ hr {
   background-color: transparent;
   filter: drop-shadow(0.2rem 0.2rem 0.5rem #7c7979);
   -webkit-filter: drop-shadow(0.2rem 0.2rem 0.5rem #7c7979);
-  border: 1px dotted red;
 }
 
 .section-news .news-wrapper .news-box {
@@ -228,21 +227,21 @@ hr {
 }
 
 .section-news .news-wrapper .news-box:nth-child(1)::after {
-  background: url("../../.././public/images/bmw-18-front.jpg");
+  background-image: url("../.././public/images/bmw-18-front.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .section-news .news-wrapper .news-box:nth-child(2)::after {
-  background: url("../../.././public/images/Audi-R8-Orange.jpg");
+  background: url("../.././public/images/Audi-R8-Orange.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .section-news .news-wrapper .news-box:nth-child(3)::after {
-  background: url("../../.././public/images/Audi-R8-Greenfullback.jpg");
+  background: url("../.././public/images/Audi-R8-Greenfullback.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -735,6 +734,7 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid red;
 }
 
 @media only screen and (min-width: 480px) {
@@ -807,7 +807,12 @@ hr {
   padding: 0.5rem 1rem;
   text-decoration: none;
   color: #080808;
-  z-index: 3;
+  z-index: 5;
+}
+
+.section-cars .car-container .car-box .car-info-box .car-info-btn .btn:link:hover,
+.section-cars .car-container .car-box .car-info-box .car-info-btn .btn:visited:hover {
+  color: #fff;
 }
 
 .section-video {
