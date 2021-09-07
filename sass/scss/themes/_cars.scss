@@ -195,7 +195,6 @@
           height: auto;
           position: relative;
           @include flex-center;
-          border: 1px solid red;
 
           @include phonePortrait {
             & {

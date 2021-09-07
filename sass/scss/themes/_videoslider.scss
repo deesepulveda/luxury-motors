@@ -180,23 +180,8 @@
 
     .swiper-pagination {
       width: 100%;
+      height: auto;
       margin-bottom: 1rem;
-
-      .swiper-pagination-bullets {
-        @include keep-it-hundo;
-        margin-bottom: 1rem;
-
-        @include tabletPortrait {
-          & {
-            margin-bottom: 2rem;
-          }
-        }
-
-        .swiper-pagination-bullet-active {
-          opacity: 1;
-          background-color: $color-green;
-        }
-      }
 
       .swiper-pagination-bullet {
         width: 5rem;
@@ -214,6 +199,22 @@
           & {
             width: 8rem;
           }
+        }
+      }
+
+      .swiper-pagination-bullets {
+        @include keep-it-hundo;
+        margin-bottom: 1rem;
+
+        @include tabletPortrait {
+          & {
+            margin-bottom: 2rem;
+          }
+        }
+
+        .swiper-pagination-bullet-active {
+          opacity: 1;
+          background-color: $color-green;
         }
       }
 
