@@ -56,14 +56,14 @@
       }
 
       &:nth-child(2)::after {
-        background: url("../.././public/images/Audi-R8-Orange.jpg");
+        background: url("../../.././public/images/Audi-R8-Orange.jpg");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
       }
 
       &:nth-child(3)::after {
-        background: url("/public/images/Audi-R8-Greenfullback.jpg");
+        background: url("../../.././public/images/Audi-R8-Greenfullback.jpg");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
