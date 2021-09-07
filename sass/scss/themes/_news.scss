@@ -23,7 +23,6 @@
     padding-top: 10rem;
     position: relative;
     @include flex-center-col;
-    background-color: transparent;
     filter: drop-shadow(0.2rem 0.2rem 0.5rem $color-gray-lite);
     -webkit-filter: drop-shadow(0.2rem 0.2rem 0.5rem $color-gray-lite);
 
@@ -47,21 +46,21 @@
       }
 
       &:nth-child(1)::after {
-        background-image: url("../.././public/images/bmw-18-front.jpg");
+        background-image: url("../public/images/bmw-18-front.jpg");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
       }
 
       &:nth-child(2)::after {
-        background: url("../.././public/images/Audi-R8-Orange.jpg");
+        background: url("../public/images/Audi-R8-Orange.jpg");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
       }
 
       &:nth-child(3)::after {
-        background: url("../.././public/images/Audi-R8-Greenfullback.jpg");
+        background: url("../public/images/Audi-R8-Greenfullback.jpg");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
