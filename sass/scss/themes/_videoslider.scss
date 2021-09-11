@@ -178,46 +178,51 @@
       }
     }
 
-    .swiper-pagination-bullets {
-      width: 100%;
-      height: auto;
-      margin-bottom: 1rem;
+    .swiper-pagination {
+      top: 90%;
 
-      @include tabletPortrait {
-        & {
-          margin-bottom: 2rem;
-        }
-      }
+      .swiper-pagination-bullets {
+        width: 100%;
+        height: auto;
+        // margin-bottom: 1rem;
+        border: 1px solid red;
 
-      .swiper-pagination-bullet {
-        width: 5rem;
-        height: 2rem;
-        //margin: 0 0.5rem;
-        opacity: 1;
-        background-color: transparent;
-        border: 0.3rem solid $color-green;
-        border-radius: 0;
-        -webkit-border-radius: 0;
-        -moz-border-radius: 0;
-        -ms-border-radius: 0;
-        -o-border-radius: 0;
-
-        @include tabletLandscape {
+        @include tabletPortrait {
           & {
-            width: 8rem;
+            margin-bottom: 2rem;
           }
         }
 
-        @include largeDesktop {
-          & {
-            width: 10rem;
+        .swiper-pagination-bullet {
+          width: 5rem;
+          height: 2rem;
+          //margin: 0 0.5rem;
+          opacity: 1;
+          background-color: transparent;
+          border: 0.3rem solid $color-green;
+          border-radius: 0;
+          -webkit-border-radius: 0;
+          -moz-border-radius: 0;
+          -ms-border-radius: 0;
+          -o-border-radius: 0;
+
+          @include tabletLandscape {
+            & {
+              width: 8rem;
+            }
+          }
+
+          @include largeDesktop {
+            & {
+              width: 10rem;
+            }
           }
         }
-      }
 
-      .swiper-pagination-bullet-active {
-        opacity: 1;
-        background-color: $color-green;
+        .swiper-pagination-bullet-active {
+          opacity: 1;
+          background-color: $color-green;
+        }
       }
     }
   }
