@@ -1077,6 +1077,8 @@ hr {
 
 .section-video .swiper-container .swiper-pagination {
   top: 90%;
+  width: 100%;
+  height: auto;
 }
 
 .section-video .swiper-container .swiper-pagination-bullets {
