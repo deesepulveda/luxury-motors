@@ -40,3 +40,33 @@ window.addEventListener("scroll", () => {
 //     window.scrollY > sectionCars.scrollHeight
 //   );
 // });
+
+// ---- SWIPER JS ----
+
+const swiper = new Swiper(".swiper-container", {
+  // Optional parameters
+  direction: "horizontal",
+  loop: true,
+  centeredSlides: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: true,
+  },
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
+});
