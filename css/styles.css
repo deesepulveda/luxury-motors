@@ -1079,19 +1079,18 @@ hr {
   top: 90%;
 }
 
-.section-video .swiper-container .swiper-pagination .swiper-pagination-bullets {
+.section-video .swiper-container .swiper-pagination-bullets {
   width: 100%;
   height: auto;
-  border: 1px solid red;
 }
 
 @media only screen and (min-width: 768px) {
-  .section-video .swiper-container .swiper-pagination .swiper-pagination-bullets {
+  .section-video .swiper-container .swiper-pagination-bullets {
     margin-bottom: 2rem;
   }
 }
 
-.section-video .swiper-container .swiper-pagination .swiper-pagination-bullets .swiper-pagination-bullet {
+.section-video .swiper-container .swiper-pagination-bullets .swiper-pagination-bullet {
   width: 5rem;
   height: 2rem;
   opacity: 1;
@@ -1105,18 +1104,18 @@ hr {
 }
 
 @media only screen and (min-width: 1024px) {
-  .section-video .swiper-container .swiper-pagination .swiper-pagination-bullets .swiper-pagination-bullet {
+  .section-video .swiper-container .swiper-pagination-bullets .swiper-pagination-bullet {
     width: 8rem;
   }
 }
 
 @media only screen and (min-width: 1824px) {
-  .section-video .swiper-container .swiper-pagination .swiper-pagination-bullets .swiper-pagination-bullet {
+  .section-video .swiper-container .swiper-pagination-bullets .swiper-pagination-bullet {
     width: 10rem;
   }
 }
 
-.section-video .swiper-container .swiper-pagination .swiper-pagination-bullets .swiper-pagination-bullet-active {
+.section-video .swiper-container .swiper-pagination-bullets .swiper-pagination-bullet-active {
   opacity: 1;
   background-color: #11db91;
 }

@@ -180,49 +180,47 @@
 
     .swiper-pagination {
       top: 90%;
+    }
 
-      .swiper-pagination-bullets {
-        width: 100%;
-        height: auto;
-        // margin-bottom: 1rem;
-        border: 1px solid red;
+    .swiper-pagination-bullets {
+      width: 100%;
+      height: auto;
 
-        @include tabletPortrait {
+      @include tabletPortrait {
+        & {
+          margin-bottom: 2rem;
+        }
+      }
+
+      .swiper-pagination-bullet {
+        width: 5rem;
+        height: 2rem;
+        //margin: 0 0.5rem;
+        opacity: 1;
+        background-color: transparent;
+        border: 0.3rem solid $color-green;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+
+        @include tabletLandscape {
           & {
-            margin-bottom: 2rem;
+            width: 8rem;
           }
         }
 
-        .swiper-pagination-bullet {
-          width: 5rem;
-          height: 2rem;
-          //margin: 0 0.5rem;
-          opacity: 1;
-          background-color: transparent;
-          border: 0.3rem solid $color-green;
-          border-radius: 0;
-          -webkit-border-radius: 0;
-          -moz-border-radius: 0;
-          -ms-border-radius: 0;
-          -o-border-radius: 0;
-
-          @include tabletLandscape {
-            & {
-              width: 8rem;
-            }
-          }
-
-          @include largeDesktop {
-            & {
-              width: 10rem;
-            }
+        @include largeDesktop {
+          & {
+            width: 10rem;
           }
         }
+      }
 
-        .swiper-pagination-bullet-active {
-          opacity: 1;
-          background-color: $color-green;
-        }
+      .swiper-pagination-bullet-active {
+        opacity: 1;
+        background-color: $color-green;
       }
     }
   }
