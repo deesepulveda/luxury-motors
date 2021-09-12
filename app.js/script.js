@@ -34,9 +34,9 @@ window.addEventListener("scroll", () => {
 
 // VIDEO SECTION APPEAR ON SCROLL ----
 
-// window.addEventListener("scroll", () => {
-//   sectionVideo.classList.toggle(
-//     "showVideo",
-//     window.scrollY > sectionCars.scrollHeight
-//   );
-// });
+window.addEventListener("scroll", () => {
+  sectionVideo.classList.toggle(
+    "videoShow",
+    window.scrollY > sectionCars.scrollHeight
+  );
+});

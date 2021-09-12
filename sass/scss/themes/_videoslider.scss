@@ -4,7 +4,8 @@
   margin: 10rem auto;
   position: relative;
   overflow: hidden;
-  @include transit4;
+  @include transit2;
+  opacity: 0;
 
   .swiper-container {
     @include keep-it-hundo;
@@ -225,5 +226,44 @@
         background-color: $color-green;
       }
     }
+  }
+}
+
+//**** JS EVENT LISTENER SHOW VIDEO SECTION ****
+
+.videoShow {
+  animation: videoEffects 1s linear 0.5s both;
+  -webkit-animation: videoEffects 1s linear 0.5s both;
+}
+
+//**** KEYFRAMES FOR VIDEO SECTION ANIMATION ****
+
+@keyframes videoEffects {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    //transform: translateY(100%);
+    //-webkit-transform: translateY(100%);
+    //-moz-transform: translateY(100%);
+    //-ms-transform: translateY(100%);
+    //-o-transform: translateY(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    //transform: translateY(0);
+    //-webkit-transform: translateY(0);
+    //-moz-transform: translateY(0);
+    //-ms-transform: translateY(0);
+    //-o-transform: translateY(0);
   }
 }
