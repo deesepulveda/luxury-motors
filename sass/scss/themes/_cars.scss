@@ -14,7 +14,7 @@
     top: 10%;
     overflow-x: hidden;
 
-    @include tabletLandscape {
+    @include tabletPortrait {
       & {
         height: 40rem;
       }
@@ -24,6 +24,10 @@
       & {
         height: 50rem;
       }
+    }
+
+    &:nth-child(1) {
+      background-color: transparent;
     }
 
     .title-container {

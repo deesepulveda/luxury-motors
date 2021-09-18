@@ -1,6 +1,7 @@
 // ACTIVATE STRICT MODE
 "use strict";
 
+const hero = document.getElementById("hero");
 const navBar = document.getElementById("navbar");
 const burger = document.getElementById("burger");
 const topBun = document.getElementById("top");
@@ -12,6 +13,8 @@ const listThree = document.getElementById("listThree");
 const listFour = document.getElementById("listFour");
 const sectionCars = document.getElementById("section-cars");
 const sectionVideo = document.getElementById("section-video");
+const mainImgBox1 = document.getElementById("main-img-box1");
+const titleMain = document.getElementById("title-main");
 
 // CLICK TO SHOW NAV MENU AND ANIMATIONS ----
 
