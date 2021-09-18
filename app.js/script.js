@@ -12,9 +12,6 @@ const listTwo = document.getElementById("listTwo");
 const listThree = document.getElementById("listThree");
 const listFour = document.getElementById("listFour");
 const sectionCars = document.getElementById("section-cars");
-const sectionVideo = document.getElementById("section-video");
-const mainImgBox1 = document.getElementById("main-img-box1");
-const titleMain = document.getElementById("title-main");
 
 // CLICK TO SHOW NAV MENU AND ANIMATIONS ----
 
@@ -36,6 +33,8 @@ window.addEventListener("scroll", () => {
 });
 
 // VIDEO SECTION APPEAR ON SCROLL ----
+
+const sectionVideo = document.getElementById("section-video");
 
 window.addEventListener("scroll", () => {
   sectionVideo.classList.toggle(

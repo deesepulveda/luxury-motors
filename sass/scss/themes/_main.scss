@@ -2,11 +2,18 @@
   width: 100%;
   height: 70rem;
   position: relative;
+  overflow: hidden;
   background-image: url(../public/images/Audi-R8-Orange-Side.jpg);
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
+
+  @include tabletPortrait {
+    & {
+      height: 80rem;
+    }
+  }
 
   .overlay {
     @include keep-it-hundo;
@@ -15,17 +22,20 @@
 
   .ad-box-wrapper {
     @include keep-it-hundo;
-    @include absol-topLeftZero;
+    max-width: 130rem;
+    @include absol-center;
     padding-top: 5rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    // @include flex-center-col;
 
     @include tabletLandscape {
       & {
+        padding-top: 0;
         flex-direction: row;
+        justify-content: center;
+        // align-items: flex-start;
       }
     }
 
@@ -35,17 +45,52 @@
       background-color: rgba(05, 05, 05, 0.8);
       border-top: 0.1rem solid $color-green;
 
-      &:not(:last-child) {
-        margin-bottom: 3rem;
+      @include tabletPortrait {
+        & {
+          height: calc(80% / 3);
+        }
       }
 
       @include tabletLandscape {
         & {
           width: calc(100% / 3 - 5rem);
-          height: 40%;
-          margin: 0 1rem;
+          height: 50%;
+          margin: 0 2rem;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+
+        @include tabletLandscape {
+          & {
+            margin-bottom: 0;
+          }
         }
       }
     }
   }
 }
+
+// .bgZoom {
+//   animation: bgZoom 2s linear 0.5s forwards;
+//   -webkit-animation: bgZoom 2s linear 0.5s forwards;
+// }
+
+// @keyframes bgZoom {
+//   0% {
+//     transform: scale(1);
+//     -webkit-transform: scale(1);
+//     -moz-transform: scale(1);
+//     -ms-transform: scale(1);
+//     -o-transform: scale(1);
+//   }
+
+//   100% {
+//     transform: scale(1.5);
+//     -webkit-transform: scale(1.5);
+//     -moz-transform: scale(1.5);
+//     -ms-transform: scale(1.5);
+//     -o-transform: scale(1.5);
+//   }
+// }
