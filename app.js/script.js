@@ -32,6 +32,18 @@ window.addEventListener("scroll", () => {
   burger.classList.toggle("sticky", window.scrollY > 200);
 });
 
+// MAIN CARDS SLIDE IN ON SCROLL ----
+
+const boxOne = document.getElementById("box1");
+const boxTwo = document.getElementById("box2");
+const boxThree = document.getElementById("box3");
+
+window.addEventListener("scroll", () => {
+  boxOne.classList.toggle("cardSlide", window.scrollY > 300);
+  boxTwo.classList.toggle("cardSlide", window.scrollY > 300);
+  boxThree.classList.toggle("cardSlide", window.scrollY > 300);
+});
+
 // VIDEO SECTION APPEAR ON SCROLL ----
 
 const sectionVideo = document.getElementById("section-video");

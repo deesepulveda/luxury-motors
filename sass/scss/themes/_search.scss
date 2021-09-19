@@ -7,6 +7,12 @@
   background: transparent;
   overflow: hidden;
 
+  @include tabletLandscape {
+    & {
+      height: 10rem;
+    }
+  }
+
   &::after {
     content: "";
     width: 80%;
