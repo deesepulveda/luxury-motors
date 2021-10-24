@@ -1,0 +1,220 @@
+.burgerOther {
+  width: 6rem;
+  height: 8rem;
+  position: absolute;
+  top: 0;
+  left: 85%;
+  @include transformX;
+  @include flex-center;
+  @include transit3;
+  position: fixed;
+  z-index: 90;
+  opacity: 0;
+  animation: burgerAppear 1s ease-in 1s forwards;
+  -webkit-animation: burgerAppear 1s ease-in 1s forwards;
+
+  @include phonePortrait {
+    & {
+      left: 88%;
+    }
+  }
+
+  @include phoneLandscape {
+    & {
+      left: 90%;
+    }
+  }
+
+  @include tabletPortrait {
+    & {
+      left: 92%;
+    }
+  }
+
+  @include tabletLandscape {
+    & {
+      left: 94%;
+    }
+  }
+
+  @include tabletPortraitLarge {
+    & {
+      left: 93%;
+    }
+  }
+
+  @include tabletLandscapeLarge {
+    & {
+      top: 1%;
+      left: 94%;
+    }
+  }
+
+  @include tabletLandscapeXL {
+    & {
+      top: 0;
+      left: 95%;
+    }
+  }
+
+  @include tabletPortraitLarge {
+    & {
+      width: 8rem;
+      height: 9rem;
+    }
+  }
+
+  .cheese {
+    width: 7rem;
+    height: 45%;
+    position: relative;
+    cursor: pointer;
+
+    .top {
+      width: 100%;
+      height: 0.75rem;
+      position: relative;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #11db91;
+      @include transit4;
+      @include deep-shadow-gray;
+      overflow: hidden;
+
+      @include tabletPortraitLarge {
+        & {
+          height: 1rem;
+        }
+      }
+
+      &::after {
+        content: "";
+        width: 20%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        background-color: rgba(255, 255, 255, 0.658);
+        animation: shineTop 1s linear infinite;
+        -webkit-animation: shineTop 1s linear infinite;
+      }
+    }
+
+    .meat {
+      width: 100%;
+      height: 0.75rem;
+      background-color: #11db91;
+      overflow: hidden;
+      position: relative;
+      @include transit4;
+      @include absol-center;
+      @include deep-shadow-gray;
+
+      @include tabletPortraitLarge {
+        & {
+          height: 1rem;
+        }
+      }
+
+      &::after {
+        content: "";
+        width: 20%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        background-color: rgba(255, 255, 255, 0.658);
+        animation: shineTop 1s linear infinite 0.05s;
+        -webkit-animation: shineTop 1s linear infinite 0.05s;
+      }
+    }
+
+    .bottom {
+      width: 100%;
+      height: 0.75rem;
+      position: relative;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      overflow: hidden;
+      background-color: #11db91;
+      @include transit4;
+      @include deep-shadow-gray;
+
+      @include tabletPortraitLarge {
+        & {
+          height: 1rem;
+        }
+      }
+
+      &::after {
+        content: "";
+        width: 20%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        background-color: rgba(255, 255, 255, 0.658);
+        animation: shineTop 1s linear infinite 0.1s;
+        -webkit-animation: shineTop 1s linear infinite 0.1s;
+      }
+    }
+
+    //**** JS CLICK EVENTS ****
+
+    .topbun-change {
+      background-color: $color-green;
+      top: 50%;
+      transform: rotate(-225deg);
+      -webkit-transform: rotate(-225deg);
+      -moz-transform: rotate(-225deg);
+      -ms-transform: rotate(-225deg);
+      -o-transform: rotate(-225deg);
+    }
+
+    .middle-change {
+      opacity: 0;
+    }
+
+    .bottombun-change {
+      background-color: $color-green;
+      top: 50%;
+      transform: rotate(225deg);
+      -webkit-transform: rotate(225deg);
+      -moz-transform: rotate(225deg);
+      -ms-transform: rotate(225deg);
+      -o-transform: rotate(225deg);
+    }
+  }
+}
+
+//***** KEYFRAMES FOR BURGER SHINE ANIMATION *****
+
+@keyframes shineTop {
+  0% {
+    transform: translateX(-300%) skewX(-30deg);
+    -webkit-transform: translateX(-300%) skewX(-30deg);
+    -moz-transform: translateX(-300%) skewX(-30deg);
+    -ms-transform: translateX(-300%) skewX(-30deg);
+    -o-transform: translateX(-300%) skewX(-30deg);
+  }
+
+  100% {
+    transform: translateX(300%) skewX(-30deg);
+    -webkit-transform: translateX(300%) skewX(-30deg);
+    -moz-transform: translateX(300%) skewX(-30deg);
+    -ms-transform: translateX(300%) skewX(-30deg);
+    -o-transform: translateX(300%) skewX(-30deg);
+  }
+}
+
+@keyframes burgerAppear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

@@ -11,8 +11,51 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./css/styles.css" />
+    <!-- SWIPER JS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
   </head>
   <body>
-    <script src="" async defer></script>
+    <!------ NAVBAR ------>
+    <nav class="navbar" id="navbar">
+      <ul class="navbar-ul" id="navbar-ul">
+        <li class="navbar-li" id="listOne">
+          <a href="./index.html" class="navbar-links">home</a>
+        </li>
+        <li class="navbar-li" id="listTwo">
+          <a href="./inventory.html" class="navbar-links">inventory</a>
+        </li>
+        <li class="navbar-li" id="listThree">
+          <a href="./contacts.html" class="navbar-links">contact</a>
+        </li>
+        <li class="navbar-li" id="listFour">
+          <a href="./about.html" class="navbar-links">about</a>
+        </li>
+      </ul>
+    </nav>
+    <!------ BURGER ------>
+    <div class="burgerOther" id="burgerOther">
+      <div class="cheese">
+        <div class="top" id="top"></div>
+        <div class="meat" id="meat"></div>
+        <div class="bottom" id="bottom"></div>
+      </div>
+    </div>
+    <div class="bgfade"></div>
+    <div class="intro">
+      <h2>about</h2>
+      <div class="contact-wrapper">
+        <div class="shape"></div>
+      </div>
+    </div>
+
+    <!------ SWIPER JS INIT ------>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./app.js/vendors.js"></script>
+    <!------ JAVASCRIPT ------>
+    <script src="./app.js/scriptContact.js" async defer></script>
+    <script src="./app.js/script.js" async defer></script>
   </body>
 </html>

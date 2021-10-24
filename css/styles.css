@@ -548,7 +548,7 @@ body {
 
 .main-event {
   width: 100%;
-  height: 70rem;
+  height: 80rem;
   position: relative;
   overflow: hidden;
   background-image: url(../public/images/Audi-R8-Orange-Side.jpg);
@@ -560,7 +560,7 @@ body {
 
 @media only screen and (min-width: 768px) {
   .main-event {
-    height: 80rem;
+    height: 100rem;
   }
 }
 
@@ -638,6 +638,42 @@ body {
   }
 }
 
+.main-event .ad-box-wrapper .ad-boxes .ad-img-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-event .ad-box-wrapper .ad-boxes .ad-img-box .ad-img {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+  opacity: 0;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+
+@media only screen and (min-width: 768px) {
+  .main-event .ad-box-wrapper .ad-boxes .ad-img-box .ad-img {
+    width: 40%;
+  }
+}
+
+@media only screen and (min-width: 1224px) {
+  .main-event .ad-box-wrapper .ad-boxes .ad-img-box .ad-img {
+    width: 60%;
+  }
+}
+
+.main-event .ad-box-wrapper .ad-boxes .ad-img-box .ad-img1 {
+  width: 70%;
+}
+
 .main-event .ad-box-wrapper .box1 {
   animation-delay: 0.2s;
 }
@@ -662,6 +698,11 @@ body {
   }
 }
 
+.opacitySlideIn {
+  animation: opacityIn 0.8s linear both 1s;
+  -webkit-animation: opacityIn 0.8s linear both 1s;
+}
+
 .cardSlide {
   animation: cardSlide 0.5s linear both;
   -webkit-animation: cardSlide 0.5s linear both;
@@ -681,6 +722,17 @@ body {
     -moz-transform: translateX(0vw);
     -ms-transform: translateX(0vw);
     -o-transform: translateX(0vw);
+  }
+}
+
+@keyframes opacityIn {
+  0% {
+    opacity: 0;
+    scale: 0;
+  }
+  100% {
+    opacity: 0.7;
+    scale: 1;
   }
 }
 
@@ -1167,14 +1219,8 @@ body {
 
 @media only screen and (min-width: 768px) {
   .section-video .swiper-container .swiper-wrapper .swiper-slide .vid-content-container .vid-content-info p {
-    padding: 0 5rem;
-    font-size: 2rem;
-  }
-}
-
-@media only screen and (min-width: 834px) {
-  .section-video .swiper-container .swiper-wrapper .swiper-slide .vid-content-container .vid-content-info p {
     padding: 0 6rem;
+    font-size: 2rem;
   }
 }
 
@@ -1326,13 +1372,6 @@ footer {
   footer {
     font-size: 2rem;
   }
-}
-
-hr {
-  width: 70%;
-  height: 0.2rem;
-  margin: 4rem auto 1rem;
-  background-color: #080808;
 }
 
 .section-news {
@@ -1890,5 +1929,297 @@ hr {
 .section-social .icon-wrapper .icons a:link:hover::after,
 .section-social .icon-wrapper .icons a:visited:hover::after {
   left: 150%;
+}
+
+.contact-container {
+  width: 100%;
+  height: 100vh;
+  padding: 2rem;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.contact-container .contact-header {
+  width: 100%;
+  height: 5rem;
+  border: 2px solid #1c77f0;
+}
+
+.contact-container .contact-form {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid red;
+}
+
+.contact-container .contact-form .form {
+  width: 75%;
+  font-size: 2rem;
+  font-family: "century-gothicbold", sans-serif;
+}
+
+.contact-container .contact-form .form .textArea {
+  margin-top: 2rem;
+}
+
+.burgerOther {
+  width: 6rem;
+  height: 8rem;
+  position: absolute;
+  top: 0;
+  left: 85%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  position: fixed;
+  z-index: 90;
+  opacity: 0;
+  animation: burgerAppear 1s ease-in 1s forwards;
+  -webkit-animation: burgerAppear 1s ease-in 1s forwards;
+}
+
+@media only screen and (min-width: 480px) {
+  .burgerOther {
+    left: 88%;
+  }
+}
+
+@media only screen and (min-width: 620px) {
+  .burgerOther {
+    left: 90%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .burgerOther {
+    left: 92%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .burgerOther {
+    left: 94%;
+  }
+}
+
+@media only screen and (min-width: 834px) {
+  .burgerOther {
+    left: 93%;
+  }
+}
+
+@media only screen and (min-width: 1112px) {
+  .burgerOther {
+    top: 1%;
+    left: 94%;
+  }
+}
+
+@media only screen and (min-width: 1366px) {
+  .burgerOther {
+    top: 0;
+    left: 95%;
+  }
+}
+
+@media only screen and (min-width: 834px) {
+  .burgerOther {
+    width: 8rem;
+    height: 9rem;
+  }
+}
+
+.burgerOther .cheese {
+  width: 7rem;
+  height: 45%;
+  position: relative;
+  cursor: pointer;
+}
+
+.burgerOther .cheese .top {
+  width: 100%;
+  height: 0.75rem;
+  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #11db91;
+  transition: 0.4s ease;
+  -webkit-transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  -ms-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+  box-shadow: 0.3rem 0.3rem 2rem #7c7979;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 834px) {
+  .burgerOther .cheese .top {
+    height: 1rem;
+  }
+}
+
+.burgerOther .cheese .top::after {
+  content: "";
+  width: 20%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  background-color: rgba(255, 255, 255, 0.658);
+  animation: shineTop 1s linear infinite;
+  -webkit-animation: shineTop 1s linear infinite;
+}
+
+.burgerOther .cheese .meat {
+  width: 100%;
+  height: 0.75rem;
+  background-color: #11db91;
+  overflow: hidden;
+  position: relative;
+  transition: 0.4s ease;
+  -webkit-transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  -ms-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  box-shadow: 0.3rem 0.3rem 2rem #7c7979;
+}
+
+@media only screen and (min-width: 834px) {
+  .burgerOther .cheese .meat {
+    height: 1rem;
+  }
+}
+
+.burgerOther .cheese .meat::after {
+  content: "";
+  width: 20%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  background-color: rgba(255, 255, 255, 0.658);
+  animation: shineTop 1s linear infinite 0.05s;
+  -webkit-animation: shineTop 1s linear infinite 0.05s;
+}
+
+.burgerOther .cheese .bottom {
+  width: 100%;
+  height: 0.75rem;
+  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  background-color: #11db91;
+  transition: 0.4s ease;
+  -webkit-transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  -ms-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+  box-shadow: 0.3rem 0.3rem 2rem #7c7979;
+}
+
+@media only screen and (min-width: 834px) {
+  .burgerOther .cheese .bottom {
+    height: 1rem;
+  }
+}
+
+.burgerOther .cheese .bottom::after {
+  content: "";
+  width: 20%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  background-color: rgba(255, 255, 255, 0.658);
+  animation: shineTop 1s linear infinite 0.1s;
+  -webkit-animation: shineTop 1s linear infinite 0.1s;
+}
+
+.burgerOther .cheese .topbun-change {
+  background-color: #11db91;
+  top: 50%;
+  transform: rotate(-225deg);
+  -webkit-transform: rotate(-225deg);
+  -moz-transform: rotate(-225deg);
+  -ms-transform: rotate(-225deg);
+  -o-transform: rotate(-225deg);
+}
+
+.burgerOther .cheese .middle-change {
+  opacity: 0;
+}
+
+.burgerOther .cheese .bottombun-change {
+  background-color: #11db91;
+  top: 50%;
+  transform: rotate(225deg);
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+}
+
+@keyframes shineTop {
+  0% {
+    transform: translateX(-300%) skewX(-30deg);
+    -webkit-transform: translateX(-300%) skewX(-30deg);
+    -moz-transform: translateX(-300%) skewX(-30deg);
+    -ms-transform: translateX(-300%) skewX(-30deg);
+    -o-transform: translateX(-300%) skewX(-30deg);
+  }
+  100% {
+    transform: translateX(300%) skewX(-30deg);
+    -webkit-transform: translateX(300%) skewX(-30deg);
+    -moz-transform: translateX(300%) skewX(-30deg);
+    -ms-transform: translateX(300%) skewX(-30deg);
+    -o-transform: translateX(300%) skewX(-30deg);
+  }
+}
+
+@keyframes burgerAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+hr {
+  width: 70%;
+  height: 0.2rem;
+  margin: 4rem auto 1rem;
+  background-color: #080808;
 }
 /*# sourceMappingURL=styles.css.map */
